@@ -8,7 +8,7 @@ import android.view.View;
 import com.kotlin.litepaldemo.R;
 import com.kotlin.litepaldemo.bean.Book;
 
-import org.litepal.crud.DataSupport;
+import org.litepal.LitePal;
 import org.litepal.tablemanager.Connector;
 
 import java.util.List;
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 book.updateAll("id = ?", "2");
                 break;
             case R.id.btn_delete:
-                DataSupport.deleteAll(Book.class, "id = ?", "3");
+                LitePal.deleteAll(Book.class, "id = ?", "3");
                 break;
             case R.id.btn_query:
-                List<Book> books = DataSupport.findAll(Book.class);
+                List<Book> books = LitePal.findAll(Book.class);
                 for (Book book : books) {
                     Log.e("Book", "id:" + book.getId());
                     Log.e("Book", "name:" + book.getName());

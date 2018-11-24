@@ -33,7 +33,6 @@
     -->
     <list>
         <mapping class="com.kotlin.litepaldemo.bean.Book" />
-        <mapping class="com.kotlin.litepaldemo.bean.Category" />
     </list>
 
     <!--

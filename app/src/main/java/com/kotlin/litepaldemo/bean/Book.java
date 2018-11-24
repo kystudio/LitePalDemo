@@ -1,8 +1,10 @@
 package com.kotlin.litepaldemo.bean;
 
-import org.litepal.crud.DataSupport;
+import android.support.annotation.NonNull;
 
-public class Book extends DataSupport {
+import org.litepal.crud.LitePalSupport;
+
+public class Book extends LitePalSupport {
     private int id;
     private String name;
     private String author;
@@ -58,6 +60,7 @@ public class Book extends DataSupport {
         this.press = press;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Book{" +
